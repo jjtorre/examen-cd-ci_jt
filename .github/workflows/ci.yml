@@ -1,9 +1,9 @@
 name: CI Workflow
 
 on:
-  pull_request: 
+  push: 
     branches:
-      - main   
+      - examen-workflows
 
 jobs:
   build-and-test:
@@ -28,4 +28,7 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}   
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
         run: |
-          pytest --maxfail=1 --disable-warnings -q   
+          pytest --maxfail=1 --disable-warnings -q
+          echo "API_KEY es: $API_KEY"
+          echo "DB_PASSWORD es: $DB_PASSWORD"
+   
