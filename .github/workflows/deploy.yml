@@ -36,4 +36,4 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{"serviceId":"my-flask-service-id"}' \
             https://api.render.com/v1/services/my-flask-service-id/deploys
-          echo "Deploy triggered to Render de Grupo Jesus"            # ✅ Configuración deployment (3 pts)
+          echo "Deploy triggered to Render de Grupo Jesus"            # ✅ Configuración deployment
