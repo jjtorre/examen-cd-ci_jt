@@ -1,0 +1,35 @@
+name: CD - Deploy API
+
+on:
+  push:
+    tags:
+      - 'v*'  # Se ejecuta cuando se crea un tag que empiece con v
+
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest
+
+      - name: Deploy to Render
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+        run: |
+          echo "Ejecutando deploy a Render..."
+          curl -X POST https://api.render.com/deploy/srv-d4t3174hg0os73cka8e0?key=${{ secrets.RENDER_API_KEY }}
