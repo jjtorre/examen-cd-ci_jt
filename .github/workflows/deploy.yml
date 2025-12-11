@@ -2,8 +2,8 @@ name: Deploy Workflow
 
 on:
   push:
-    tags:
-      - 'v*'   # ✅ Trigger tags correcto (2 pts)
+    #tags:
+     # - 'v*'   # ✅ Trigger tags correcto (2 pts)
 
 jobs:
   test-and-deploy:
