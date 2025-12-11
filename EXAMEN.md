@@ -45,17 +45,16 @@ Implementar workflows de CI/CD usando GitHub Actions para automatizar testing y 
 **Trigger:** Tags que inicien con `v*` (ej: `v1.0.0`)
 
 **Requisitos:**
-- Ejecutar tests antes del deploy
 - Deploy a plataforma cloud (Render/Railway/Vercel)
 - Usar GitHub Secrets para credenciales
 - Configurar variables de entorno de producción
 
 **Evaluación:**
 - Trigger tags correcto (2 pts)
-- Tests pre-deploy (2 pts)
-- Configuración deployment (3 pts)
+- Configuración deployment (4 pts)
 - GitHub Secrets (2 pts)
 - Variables de entorno (1 pt)
+- Compartir URL del sitio deplorado y una captura de un API funcionando (1 pt)
 
 ---
 
