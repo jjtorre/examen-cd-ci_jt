@@ -30,5 +30,4 @@ jobs:
         run: |
           pytest --maxfail=1 --disable-warnings -q
           echo "API_KEY es: $API_KEY"
-          echo "DB_PASSWORD es: $DB_PASSWORD"
-   
+
