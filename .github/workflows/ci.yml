@@ -1,4 +1,4 @@
-name: CI Workflow
+name: CI Workflow for Pull Requests Exam Jesus
 
 on:
   pull_request: 
