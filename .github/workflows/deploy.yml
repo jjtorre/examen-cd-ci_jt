@@ -2,8 +2,8 @@ name: Deploy Workflow
 
 on:
   push:
-    #tags:
-     # - 'v*'   
+    tags:
+      - 'v*'   
 jobs:
   test-and-deploy:
     runs-on: ubuntu-latest
